@@ -929,12 +929,6 @@ kbd {
   font-weight: 400;
   color: #f5f6f7;
 }
-.footer__icon {
-  display: inline-block;
-  margin: 0 0.4rem;
-  font-size: 1em;
-  color: #f00;
-}
 .footer-inner {
   position: relative;
   padding: 1rem;
@@ -942,6 +936,17 @@ kbd {
   text-align: center;
   color: #f5f6f7;
   background-color: #2d2e30;
+}
+.footer-inner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.38);
 }
 .footer a {
   color: #c20808;
@@ -1765,13 +1770,13 @@ kbd {
   left: 0;
 }
 .mode-track-moon::before {
-  content: '🌜';
+  content: '🌑';
 }
 .mode-track-sun {
   right: 0;
 }
 .mode-track-sun::before {
-  content: '🌞';
+  content: '🔆';
 }
 .mode-thumb {
   position: absolute;
@@ -1873,6 +1878,7 @@ kbd {
 }
 .gallery img {
   margin-bottom: 10px;
+  width: 220px;
 }
 .exturl__icon {
   margin: 0 0.1em 0 0.3em;
@@ -2162,9 +2168,9 @@ kbd {
   font-size: 0.9em;
   color: #999;
 }
-@media (min-width: 808px) {
+@media (min-width: 1020px) {
   .main-inner {
-    width: 808px;
+    width: 1020px;
   }
 }
 @media (min-width: 991.98px) {
@@ -2289,6 +2295,9 @@ kbd {
   .post-list .post {
     margin: 0 0 0.8rem;
     padding: 0.8rem;
+  }
+  .gallery img {
+    width: 100%;
   }
   .friends-plugin__item {
     margin: 0;
